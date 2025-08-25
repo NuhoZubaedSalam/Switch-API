@@ -20,7 +20,7 @@ document.querySelector("#buttons").addEventListener("click", (event) => {
 
         loadUsers();
     } else {
-        countriesButton.classList.toggle('selected-button'); 
+        countriesButton.classList.add('selected-button'); 
         usersButton.classList.remove('selected-button');
 
         loadCountries();
