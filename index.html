@@ -3,18 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <style>
+            .selected-button {
+                background-color: #1d293d;
+                color: white;
+                border-color: #1d293d;
+            }
+        </style>
 
         <title>Working w/APIs</title>
     </head>
     <body class="align-center min-h-screen">
-        <div class="flex justify-between mx-2 md:mx-20 xl:mx-40 mt-2 items-center">
+        
+        <div class="flex justify-between mx-2 md:mx-20 xl:mx-40 mt-2 pb-[5px] items-center">
             <h2 class="font-semibold text-[20px]"><span class="font-normal">Switch</span> API</h2>
-            <ul id="navbar" class="flex">
-                <li class="border-2 p-1 w-[84px] md:w-[100px] text-center mr-3 rounded-lg cursor-pointer tracking-normal font-medium">Countries</li>
-                <li class="border-2 p-1 w-[84px] md:w-[100px] text-center rounded-lg cursor-pointer tracking-normal font-medium">Users</li>
-            </ul>
+            <div id="buttons" class="flex">
+                <button id="countries" class="border-2 p-1 px-4 max-[350px]:px-2 h-9 text-center mr-3 rounded-lg cursor-pointer tracking-normal font-medium hover:bg-slate-800 hover:text-white hover:ring-2 hover:ring-slate-400 uppercase">Countries</button>
+                <button id="users" class="border-2 p-1 px-4 max-[350px]:px-2 h-9 text-center rounded-lg cursor-pointer tracking-normal font-medium hover:bg-slate-800 hover:text-white hover:ring-2 hover:ring-slate-400 uppercase">Users</button>
+            </div>
         </div>
 
         <script src="./js/script.js"></script>
