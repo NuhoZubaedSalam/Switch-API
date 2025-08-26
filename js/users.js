@@ -1,8 +1,6 @@
 document.querySelector("#buttons").addEventListener("click", (event) => {
     if (event.target.id === 'countries') 
         window.open(`../pages/countries.html`, "_self");
-    else
-        loadUsers(); 
 });
 
 const loadUsers = () => {

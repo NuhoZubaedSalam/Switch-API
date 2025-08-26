@@ -1,8 +1,6 @@
 document.querySelector("#buttons").addEventListener("click", (event) => {
     if (event.target.id === 'users') 
         window.open(`../pages/users.html`, "_self");
-    else
-        loadCountries();
 });
 
 const loadCountries = () => {
@@ -27,8 +25,8 @@ const displayCountries = (countries) => {
             <p><b>Capital:</b> ${country?.capital}</p> <br>
             <p><b>Population:</b> ${country?.population.toLocaleString()}</p>
             <p><b>Continent:</b> ${country?.continents.join(",")}</p>
-            <p><b>Area:</b> ${country?.area.toLocaleString()}</p> <br>
-            <p><b>Fun facts:</b><br> <b><i>FIFA code:</i></b> ${country?.fifa} <br> <b><i>Timezones:</i></b> ${country?.timezones?.join("\n")}</p>
+            <p><b>Area:</b> ${country?.area.toLocaleString()} km²</p> <br>
+            <p><b><i>Fun facts:</i></b><br> <b>FIFA code:</b> ${country?.fifa} <br> <b>Timezones:</b> ${country?.timezones?.join(`, `)}</p>
         `;
 
         containerDiv.appendChild(countryDiv);
